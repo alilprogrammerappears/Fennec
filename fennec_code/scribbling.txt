@@ -1,0 +1,41 @@
+Notes
+
+# change threading to multiprocessing
+
+
+Backend
+- Processes and functionality
+    - monitoring/process blocking
+    - port blocking
+    - permissions elevation
+    - networking (however the fuck this'll work)
+    - start up automation (post-exe/v1.0 functionality)
+    - contact info and password hashing and file encryption
+    - Notification contact logic
+- runs independently of front end script, but must still communicate
+
+Frontend
+- UI
+    - homepage
+    - tips/knowledgebase
+    - notification pop up
+    - settings page
+    - shortcut
+- Needs check when opening
+- runs independently of back end script, but must still communicate
+
+Misc
+- Communication
+    - state of monitoring process (needs a bridge)
+    - password and contact info (can just call function script)
+    - .....could multiprocessing and just running main.py and then having ui_home.py run through an if statement be the solution? am I wildly overthinking this?
+
+
+Flow
+
+1. User starts computer (backend runs) -> user opens UI (frontend runs) -> user closes UI (only frontend stops)
+2. User enters password (changes to hash, checks file integrity, compares hash to file content)
+    -> User clicks "pause monitoring" (creates instance of state_manager, changes the state to true, how does process_blocking access this change?)
+
+
+how the fuck can i get rid of the terminal saying "ok." for port checking/blocking? it's not coming from the code, it's coming from Win Firewall. AHHHH
