@@ -1,0 +1,9 @@
+psutil
+tkinter
+mysql
+pillow
+winshell
+win32com
+pythoncom
+crpytography
+bcrypt
